@@ -3,4 +3,4 @@
 p { color: black; }  /* This style gives a black font */ 
 body {background-color: #5F6861;}  /* This style sets the entire background to the desired color*/ 
 img {border: 3px solid black; width:30%;}  /* This style gives a black border on the image */ 
-h1 {font-family: "Poetsen One", sans-serif;;}  /* This style changes the header font to desired font(google font) */ 
+h1 {font-family: "Poetsen One", sans-serif;}  /* This style changes the header font to desired font(google font) */ 
