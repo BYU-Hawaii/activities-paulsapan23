@@ -1,0 +1,5 @@
+#mainHeader { font-size: 28px; font-weight: bold; } /* This sets the header font size */ 
+.highlight { background-color: gray; } /* This style gives a grey background to highlighted content */
+p { color: black; }  /* This style gives a black font */ 
+style {background-color: #5F6861;}  /* This style sets the entire background to the desired color*/ 
+style {border: 3px solid black; width:30%;}  /* This style gives a black border on the image */ 
