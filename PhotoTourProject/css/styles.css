@@ -32,7 +32,7 @@ footer {
 ul {
     text-align: center;
     list-style-position: inside;
-    list-style-image: url('/PhotoTourProject/images/bullet.gif');
+    list-style-image: url('/activities-paulsapan23/PhotoTourProject/images/bullet.gif');
    
 }
 
@@ -54,7 +54,7 @@ img {
 }
 
 html { 
-    background: url('/PhotoTourProject/images/bg-lake.webp') no-repeat center center fixed; 
+    background: url('/activities-paulsapan23/PhotoTourProject/images/bg-lake.webp') no-repeat center center fixed; 
     background-size: cover;
 }
 
