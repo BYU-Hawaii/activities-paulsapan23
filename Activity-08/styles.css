@@ -35,6 +35,10 @@ a img {
     margin-right: 5px;
 }
 
+a i {
+    color: #000; /* Set the color of the icons to black */
+}
+
 a:hover {
     background-color: #6d1e1e;
     color: #fff;
@@ -43,7 +47,7 @@ a:hover {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #333;
+    background-color: #8b2828; /* Change dropdown background color to match the nav bar */
     top: 100%;
     left: 0;
     z-index: 1;
