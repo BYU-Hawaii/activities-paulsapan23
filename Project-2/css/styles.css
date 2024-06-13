@@ -1,0 +1,146 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Mobile First Design */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: url('/activities-paulsapan23/Project-2/images/bg-lake.webp') no-repeat center center fixed;
+    background-size: cover;
+}
+
+p {
+    text-align: left;
+    text-indent: 40px;
+}
+ol {
+    text-align: left;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "nav"
+        "main-content";
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+header, nav, main {
+    background-color: rgba(45, 179, 179, 0.42);
+    padding: 20px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    background-color: #8caab6;
+    padding: 10px;
+    display: block;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+nav ul li a:hover {
+    background-color: #695e5e;
+    color: #fff;
+}
+
+main section {
+    margin-bottom: 20px;
+}
+
+main section h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+main section img {
+    width: 100%;
+    max-width: 100%;
+    border: 2px solid black;
+    margin-top: 20px;
+}
+
+/* Tablet and Small Laptop Styles */
+@media (min-width: 600px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    main section h2 {
+        font-size: 24px;
+    }
+}
+
+/* Larger Desktop Styles */
+@media (min-width: 1024px) {
+    body {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    header, nav, main {
+        padding: 40px;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center; /* Center the navigation bar */
+    }
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+    nav ul li a {
+        font-size: 22px;
+    }
+
+    main section h2 {
+        font-size: 28px;
+    }
+
+    main section img {
+        flex: 1 0 30%;
+    }
+}
