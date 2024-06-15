@@ -9,6 +9,11 @@ body {
     margin-bottom: 50%;
 }
 
+span {
+    text-align: center;
+    padding: 8px;
+}
+
 .container {
     max-width: 600px;
     margin: auto;
@@ -30,7 +35,9 @@ h1, h2 {
     border: 1px solid #ccc;
     font-weight: bold;
     text-align: center;
-   
+    display: flex;
+    align-items: center;
+    justify-content: center;
    
     
     
