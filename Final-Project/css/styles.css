@@ -11,7 +11,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background: url('/Final-Project/images/bg.jpg') no-repeat center center fixed;
+    background: url('/activities-paulsapan23/Final-Project/images/bg.jpg') no-repeat center center fixed;
     background-size: cover;
     margin: 0;
 }
