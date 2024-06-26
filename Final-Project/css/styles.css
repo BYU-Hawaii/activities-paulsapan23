@@ -1,207 +1,156 @@
-/* Basic Reset */
+/* Reset and box-sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body styles */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: url('/Final-Project/images/bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+}
+
+/* Header and Navbar styles */
 header {
-    grid-area: header;
     background-color: #48968b;
     padding: 10px;
-    text-align: center;
+    font-size: 30px; /* Increased font size for header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.nav {
-    grid-area: nav;
-    background-color: #e1e1e1;
-    padding: 5px; 
-    text-align: center;
+.navbar-logo h1 {
+    color: #e2cd56;
+    font-size: 1.5em;
 }
 
-nav {
-    font-weight: bold;
-    background-color: #7aa0ad;
-    box-shadow: 0 2px 5px rgba(44, 34, 34, 0.3);
-    padding: 5px;
+.navbar-menu ul {
+    list-style: none;
+    display: flex;
 }
 
-
-a:hover {
-    background-color: #4362a5;
-    color: #fff;
+.navbar-menu ul li {
+    margin: 0 15px;
+    position: relative;
 }
 
-.nav ul {
-    list-style-type: none;
-    padding: 0;
+.navbar-menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    transition: color 0.3s;
 }
 
-.nav ul li {
-    margin: 5px 0;
+.navbar-menu ul li a:hover {
+    color: #ffd700;
 }
 
-
-.main-content {
-    grid-area: main-content;
-    background-color: #fff;
-    padding: 10px;
-}
-
-
-
+/* Main content styles */
 main {
     flex: 1;
-    padding: 2em;
-    background: #f4f4f4;
+    padding: 20px;
+    display: grid;
+    place-items: center; /* Center the child elements */
 }
 
-section {
-    margin-bottom: 2em;
-}
-
-/* Footer styling */
+/* Footer styles */
 footer {
     background: #8b9eb1;
     text-align: center;
     padding: 1em 0;
-    position: absolute;
-    bottom: 0;
+    color: white;
+    margin-top: auto;
+}
+
+/* Grid Container */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
     width: 100%;
-}
-/* Responsive Layout */
-@media (min-width: 768px) {
-    .grid-container {
-        grid-template-areas:
-            "nav nav"
-            "header header"
-            "main-content main-content"
-            "footer footer";
-        grid-template-columns: 1fr 2fr;
-    }
-
-    .nav ul {
-        display: flex;
-        justify-content: space-around;
-    }
-
-    .nav ul li {
-        margin: 0;
-    }
+    max-width: 600px; /* Adjust as needed */
+    margin: 0 auto; /* Center align grid container */
 }
 
-
-@media (min-width: 768px) and (max-width: 1023px) {
-    .gallery img {
-        flex: 1 0 45%;
-    }
-}
-/* Mobile First Design */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-}
-
-header, nav, main, footer {
+.grid-item {
+    position: relative;
+    background-color: #fff;
     padding: 20px;
-    margin: 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: grid;
+    grid-template-areas:
+        "canvas"
+        "info";
+    gap: 20px;
 }
 
-header h1 {
-    font-size: 24px;
+.grid-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-menu ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-menu ul li {
+        margin: 10px 0;
+    }
+}
+
+/* Additional styles for Hangman game */
+#hangmanGame {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
     text-align: center;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
+#wordDisplay {
+    font-size: 2rem;
+    margin: 20px 0;
 }
 
-nav ul li {
-    margin: 10px 0;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 18px;
-}
-
-main section {
-    margin-bottom: 20px;
-}
-
-main section h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-footer {
-    text-align: center;
-    font-size: 14px;
-    background-color: #f4f4f4;
+#guessInput {
     padding: 10px;
+    font-size: 1rem;
+    margin-right: 10px;
 }
 
-/* Tablet and Small Laptop Styles */
-@media (min-width: 600px) {
-    header h1 {
-        font-size: 28px;
-    }
-
-    nav ul {
-        display: flex;
-        justify-content: space-around;
-    }
-
-    nav ul li {
-        margin: 0;
-    }
-
-    nav ul li a {
-        font-size: 20px;
-    }
-
-    main section h2 {
-        font-size: px;
-    }
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
 }
 
-/* Larger Desktop Styles */
-@media (min-width: 1024px) {
-    body {
-        max-width: flex;
-        margin: 0 auto;
-    }
+button:hover {
+    background-color: #45a049;
+}
 
-    header, nav, main, footer {
-        padding: 40px;
-    }
-
-    header h1 {
-        font-size: 32px;
-    }
-
-    nav ul {
-        justify-content: flex-start;
-    }
-
-    nav ul li {
-        margin: 0 15px;
-    }
-
-    nav ul li a {
-        font-size: 22px;
-    }
-
-    main section h2 {
-        font-size: 24px;
-    }
-
-    footer {
-        font-size: 16px;
-    }
+button:active {
+    background-color: #3e8e41;
 }

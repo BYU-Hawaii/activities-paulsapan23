@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Explorer!</title>
+    <link rel="stylesheet" href="/activities-paulsapan23Final-Project/css/styles.css">
+    <script src="https://kit.fontawesome.com/8f8f6a77bd.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="navbar-logo">
+                <h1>Word Explorer</h1>
+            </div>
+            <nav class="navbar-menu">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-house"></i>Home</a></li>
+                    <li><a href="about.html"><i class="fas fa-magnifying-glass"></i>About</a></li>
+                    <li><a href="learn.html"><i class="fa-solid fa-school"></i>Learn More</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+<!-- Hangman Game Section -->
+        <section id="options" class="grid-container">
+            <div class="grid-item">
+                <div id="hangmanGame">
+                    <h2>Hangman Game</h2>
+                    <div id="wordDisplay"></div>
+                    <input type="text" id="guessInput" placeholder="Enter a letter or the whole word">
+                    <button onclick="guessLetterOrWord()">Guess</button>
+                    <div>
+                        <strong>Guesses Left:</strong> <span id="guessesLeftSpan"></span>
+                    </div>
+                    <div>
+                        <strong>Correct Guesses:</strong> <span id="correctGuessesSpan"></span>
+                    </div>
+                    <div>
+                        <strong>Incorrect Guesses:</strong> <span id="incorrectGuessesSpan"></span>
+                    </div>
+                    <div id="hangmanMessage"></div> <!-- Message container -->
+                </div>
+            </div>
+    </section>
+</main>
+    <footer>
+        <p>&copy; 2024 PlayNLearn Website. All rights reserved.</p>
+    </footer>
+
+    <script src="/activities-paulsapan23/Final-Project/scripts/hangman.js"></script>
+</body>
+</html>
